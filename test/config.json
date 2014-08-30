@@ -1,0 +1,11 @@
+{
+  "logging": {
+    "log": true,
+    "warn": true,
+    "error": true
+  },
+
+  "foo": {
+    "home": "${HOME}"
+  }
+}

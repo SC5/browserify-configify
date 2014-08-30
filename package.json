@@ -1,0 +1,28 @@
+{
+  "name": "browserify-configify",
+  "version": "0.0.1",
+  "description": "Browserify transform for applying parameters in JSON configurations",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:SC5/browserify-configify.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "docs": "node_modules/.bin/jsdoc2md index.js > README.md",
+    "test": "node_modules/.bin/vows test/*-spec.js"
+  },
+  "author": "Lauri Svan",
+  "license": "MIT",
+  "keywords": [
+    "browserify"
+  ],
+  "devDependencies": {
+    "browserify": "^5.10.1",
+    "jsdoc-to-markdown": "0.5.6",
+    "vows": "^0.7.0"
+  },
+  "dependencies": {
+    "jsos-util": "0.0.3",
+    "through2": "^0.6.1"
+  }
+}
