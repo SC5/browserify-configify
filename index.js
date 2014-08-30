@@ -49,6 +49,11 @@ function configify(file, cb) {
   var that = this,
       buffer = '';
 
+  // Don't transform anything else than JSON
+  if (!isJSON(file)) {
+    return through();
+  }
+
   function transform(chunk, encoding, callback) {
     // Handle the case of nonexisting chunk'
     if (!chunk) {

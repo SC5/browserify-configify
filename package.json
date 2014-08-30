@@ -1,6 +1,6 @@
 {
   "name": "browserify-configify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Browserify transform for applying parameters in JSON configurations",
   "repository": {
     "type": "git",
