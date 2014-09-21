@@ -1,6 +1,6 @@
 {
   "name": "browserify-configify",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Browserify transform for applying parameters in JSON configurations",
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
     "vows": "^0.7.0"
   },
   "dependencies": {
-    "jsos-util": "0.0.3",
-    "through2": "^0.6.1"
+    "jsos-util": "0.0.5",
+    "through2": "^0.6.2"
   }
 }
