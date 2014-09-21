@@ -15,6 +15,7 @@
  * var configify = require('browserify-configify');
  * ```
  */
+'use strict';
 var through = require('through2'),
     util = require('jsos-util');
 
@@ -41,12 +42,11 @@ function isJSON(file) {
  * b.bundle(callback);
  * ```
  * @param {String} file The file to transform
- * @param {Function} cb The callback to execute after the transform
  * @return The browserify transform
  */
-function configify(file, cb) {
+function configify(file) {
   // Note: We rely on configify having a valid 'this' containing options
-  var that = this,
+  var that = this, // jshint ignore:line
       buffer = '';
 
   // Don't transform anything else than JSON
@@ -82,7 +82,7 @@ function configify(file, cb) {
     transformed = util.mapNested(parsed, function(val) {
       return util.substitute(val, dictionary);
     });
-    this.push(JSON.stringify(transformed));
+    this.push(JSON.stringify(transformed)); // jshint ignore:line
     callback();
   }
 
